@@ -1,0 +1,4 @@
+.small-img-group{
+    display: flex !Important;
+    justify-content: space-between !Important;
+}

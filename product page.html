@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>product page</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link rel="stylesheet" href="Hover-master/Hover-master/css/hover-min.css">
+      <style>
+          body{
+              overflow-x: hidden;
+          }
+          .small-img-group{
+                display: flex;
+                justify-content: space-between;
+          }
+
+          .small-img-col{
+              flex-basis: 24%;
+              cursor: pointer;
+              opacity: 0.7;
+          }
+          .small-img-col:hover{
+             opacity: 1; 
+          }
+          .sproduct select{
+              display: block;
+              padding: 5px 10px;
+          }
+          .slct{
+              width: 210px;
+              border-color: #a3bcbf;
+          }
+          .nmbr{
+/*
+              position: absolute;
+              top: 399px;
+*/
+              margin-top: 0px;
+              border: solid 1px #a3bcbf;
+              height: 45px !important;
+          }
+          .sproduct input{
+              width: 50px;
+              height: 40px;
+              padding-left: 10px;
+              font-size: 16px;
+              margin-right: 10px;
+          }
+          .sproduct input:focus{
+              outline: none;
+          }
+          .buy-btn{
+/*
+             position: absolute;
+             left:650px;
+*/
+             margin-left:0px;
+             margin-top: -5px !important;
+             background: #a3bcbf;
+             border-color: #a3bcbf; 
+             border-radius: 0%;
+             width: 150px;
+             height: 45px !important;
+             opacity: 1;
+             transition: 0.3s all;
+          }
+          .product{
+              cursor: pointer;
+              margin-bottom: 2rem; 
+          }
+          .product img{
+              transition: 0.3s all;
+          }
+          .product:hover img{
+              opacity: 0.7;
+          }
+          .product .buy-btn{
+              background: #a3bcbf;
+              transform: translateY(20px);
+              opacity: 0;
+              transition: 0.3s all;
+          }
+          .product:hover .buy-btn{
+              background: #a3bcbf !important;
+              transform: translateY(0);
+              opacity: 1;
+          }
+          .buy-btn:hover{
+              background: #a3bcbf !important;
+              border-color: white;
+          }
+          .details{
+/*
+              position: absolute;
+              top: 600px;
+              left: 135px;
+*/
+              margin-top: 190px;
+              margin-left:-460px !important;
+          }
+          .hvr-trim:before {
+              content: '';
+              position: absolute;
+              border: white solid 2px !important;
+              top: 4px;
+              left: 4px;
+              right: 4px;
+              bottom: 4px;
+              opacity: 0;
+              -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s;
+              -webkit-transition-property: opacity;
+              transition-property: opacity;
+            }
+          hr{
+              width: 80px !important;
+              height: 1px !important;
+              background-color: black !important;
+              opacity: 100%;
+          }
+          .hr-1{
+              margin-top: -12px !important;
+              width: 200px !important;
+              height: 1px !important;
+              background-color: black !important;
+              opacity: 100%;
+          }
+          .hr-2{
+              margin-top: -30px !important;
+              width: 200px !important;
+              height: 1px !important;
+              background-color: black !important;
+              opacity: 100%;
+          }
+          .star{
+              padding: 10px 0;
+          }
+          .star-1{
+              padding: 10px 0;
+          }
+          .star i{
+              font-size: 0.8rem;
+              color: goldenrod;
+          }
+          .txtgry{
+              color: gray;
+          }
+          .related{
+/*
+              position: absolute;
+              top: 740px;
+*/
+              margin-top: 0px!important;
+          }
+/*
+          .fava{
+              color: #a3bcbf;
+              position: absolute;
+              top: 460px;
+              left: 590px;
+              margin-top: 20px;
+              margin-left: 0px;
+              cursor: pointer;
+          }
+          .hvr-underline-from-left:before {
+              content: "";
+              position: absolute;
+              z-index: -1;
+              left: 0;
+              right: 100%;
+              top: 18px;
+              background: black;
+              height: 4px;
+              -webkit-transition-property: right;
+              transition-property: right;
+              -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s;
+              -webkit-transition-timing-function: ease-out;
+              transition-timing-function: ease-out;
+            }
+*/
+          .prdcts{
+              margin-left: 200px !important;
+/*              padding: 0 100px 100px 0 !important;*/
+          }
+          .prd{
+              padding: 0 100px 0px 0 !important;
+          }
+          @media (max-width: 730px) {
+              
+              .details{
+              margin-top: 50px;
+              margin-left:0px !important;
+            } 
+            .prdcts{
+               margin-left: 55px !important;   
+              }
+              body{
+                  overflow-x: hidden;
+              }
+          }
+      </style>
+    </head>
+    <body>
+<!--.............container.............-->
+        <section class="container sproduct my-5 pt-5">
+            <div class="row mt-5">
+                <div class="col-lg-5 col-md-12 col-12">
+                    <img class="img-fluid w-100 pb-1" src="img/Ring/11.png" alt="img">
+                    
+                    <div class="small-img-group mgmoa">
+                       <div class="small-img-col">
+                           <img src="img/Ring/1.jpg" width="100%" class="small-img" alt="img">
+                       </div>
+                       <div class="small-img-col">
+                           <img src="img/Ring/2.jpg" width="100%" class="small-img" alt="img">
+                       </div>
+                        <div class="small-img-col">
+                           <img src="img/Ring/3.jpg" width="100%" class="small-img" alt="img">
+                       </div>
+                       <div class="small-img-col">
+                           <img src="img/Ring/4.jpg" width="100%" class="small-img" alt="img">
+                       </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-12">
+                    <h6 class="txtgry">Home / Ring</h6>
+                    <h3 class="py-4">ALMOST 4 CARAT MORGANITE WITH DIAMONDS ON 14K ROSE GOLD RING.</h3>
+                    <hr class="hr-1">
+                    <div class="star star-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h2>$139.00</h2>
+                    <select class="my-3 slct">
+                    <option>Select Size</option>
+                    <option>4</option>
+                    <option>4.5</option>
+                    <option>5</option>
+                    <option>5.5</option>
+                    <option>6</option>
+                    <option>6.5</option>
+                    <option>7</option>
+                    <option>7.5</option>
+                    <option>8</option>
+                    <option>8.5</option>
+                    <option>9</option>
+                    </select>
+                    <input class="nmbr" type="number" value="1">
+<!--هنا احط كود بوتون دارك لو مظبطش-->
+                    <button class="buy-btn btn btn-dark hvr-trim">Add To Cart</button>
+                    <!--<h6 class="fava hvr-underline-from-left">Add to Wishlist</h6>-->
+<!--<hr class="hr-2">-->
+                    <div class="details">
+                    <h4 class="mt-5 mb-5">Product Details</h4>
+                    <hr class="hr-2">
+                    <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!--.............featured.............-->
+        <section id="featured" class="my-5 pd-5 related">
+            <div class="container text-center mt-5 py-5">
+               <h3>Related Products</h3> 
+                <hr class="mx-auto hr-4">
+            </div>
+            <div class="row mx-auto prdcts container-fluid">
+                <div class="product prd text-center col-lg-3 col-md-4 col-12">
+                    <img class="img-fluid md-3" src="img/Ring/11.jpg" alt="img">
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h5 class="p-name">
+                    4 CARAT MORGANITE WITH DIAMONDS ON 14K ROSE GOLD RING</h5>
+                    <h4 class="p-price">
+                    $92.00</h4>
+                    <button class="buy-btn btn btn-dark hvr-trim">Buy Now</button>
+                </div>
+                 <div class="product prd text-center col-lg-3 col-md-4 col-12">
+                    <img class="img-fluid md-3" src="img/Ring/222.jpg" alt="img">
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h5 class="p-name">OPAL RING WITH DIAMONDS SURROUNDING ON 18K GOLD CUP BASE
+                    </h5>
+                    <h4 class="p-price">
+                    $92.00</h4>
+                    <button class="buy-btn btn btn-dark hvr-trim">Buy Now</button>
+                </div>
+                <div class="product prd text-center col-lg-3 col-md-4 col-12">
+                    <img class="img-fluid md-3" src="img/Ring/33.jpg" alt="img">
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h5 class="p-name">
+                    ADJUSTABLE MULTI-ROW DIAMOND ETERNITY BAND 18K GOLD</h5>
+                    <h4 class="p-price">
+                    $92.00</h4>
+                    <button class="buy-btn btn btn-dark hvr-trim">Buy Now</button>
+                </div>
+<!--
+                <div class="product text-center col-lg-3 col-md-4 col-12">
+                    <img class="img-fluid md-3" src="img/featured/4.jpg" alt="img">
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h5 class="p-name">
+                    Sport Boots</h5>
+                    <h4 class="p-price">
+                    $92.00</h4>
+                    <button class="buy-btn">Buy Now</button>
+                </div>
+-->
+            </div>
+        </section>
+        
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        
+<!--
+        <script>
+            
+            var MainImg = document.getElementById('MainImg');
+            var smallimg = document.getElementsByClassName('small-img');
+            
+            smallimg[0].onclick = function() {
+                MainImg.src = smallimg[0].src;
+            }
+            
+            smallimg[1].onclick = function() {
+                MainImg.src = smallimg[1].src;
+            }
+            
+            smallimg[2].onclick = function() {
+                MainImg.src = smallimg[2].src;
+            }
+            
+            smallimg[3].onclick = function() {
+                MainImg.src = smallimg[3].src;
+            }
+            
+        </script>
+-->
+    </body>
+</html>
+
+
+
+
+
+
+
